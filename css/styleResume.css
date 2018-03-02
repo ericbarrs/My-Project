@@ -167,7 +167,7 @@ h3 {
     background-color: rgb(50, 50, 50);
   }
   .nestedHeader {
-    grid-template-columns: 30% 50% 10%;
+    grid-template-columns: 50% 50%;
     grid-gap: 1em;
     font-size: 10px;
     grid-template-areas: 'first last last' 'picture picture .';
