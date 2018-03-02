@@ -60,11 +60,7 @@ body {
   display: grid;
   grid-template-columns: .2fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas:
-  "sidebar . ."
-  "sidebar headline img"
-  "sidebar box img" "sidebar . ."
-  "sidebar box2 box2";
+  grid-template-areas: "sidebar . ." "sidebar headline img" "sidebar box img" "sidebar . ." "sidebar box2 box2";
   background-color: rgba(0, 0, 0, .2);
   width: 100vw;
   height: 100vh;
@@ -79,7 +75,7 @@ body {
 
 .nestedbox2>a {
   text-decoration: none;
-  color: rgba(0, 255, 0,.9);
+  color: rgba(0, 255, 0, .9);
   font-size: 30px;
   border-radius: 50%;
   transition: 2s;
@@ -122,7 +118,7 @@ body {
 }
 
 .headline:hover {
-  color: rgb(0,255,0);
+  color: rgb(0, 255, 0);
   text-shadow: 1px 1px black;
   transform: scale(1.5) translate(0px, 10px);
   transition-duration: 2s;
@@ -157,7 +153,7 @@ body {
   .nestedbox2 a {
     margin: 5px;
     font-size: 20px;
-    background-color: rgba(0,0,255,.6);
+    background-color: rgba(0, 0, 255, .6);
     border-radius: 0px;
   }
   .headline h1, p {
@@ -165,7 +161,7 @@ body {
   }
   .nestedbox2>a:hover {
     background: none;
-    color: rgb(0,255,0);
+    color: rgb(0, 255, 0);
     text-shadow: 2px 1px 2px black;
   }
   .headline:hover {
