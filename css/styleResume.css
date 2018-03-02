@@ -167,10 +167,10 @@ h3 {
     background-color: rgb(50, 50, 50);
   }
   .nestedHeader {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-gap: 1em;
     font-size: 10px;
-    grid-template-areas: 'first last last' 'picture picture .';
+    grid-template-areas: 'first' 'last' 'picture';
   }
   .wrapper {
     height: 90%;
