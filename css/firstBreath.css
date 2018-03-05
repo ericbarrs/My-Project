@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.linkedin {
+  grid-area: linkedin;
+}
+
+.gitHub {
+  grid-area: github;
+}
+
+.main {
+  grid-area: main;
+}
+.resume{
+  grid-area: resume;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #E7EDF9;
+}
+
+.intro {
+  background-image: url(../img/image2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: table;
+  z-index: 0;
+}
+
+.inner, .outter {
+  display: table-cell;
+  color: white;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 2;
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 400%;
+  text-shadow: 0px 0px 300px #000;
+  margin-bottom: 50px;
+  color: rgba(0, 0, 0, .8);
+}
+
+.btn, .top {
+  color: rgb(20, 20, 20);
+  background: none;
+  border: 5px rgb(20, 20, 20) solid;
+  border-radius: 9px;
+  padding: 15px 20px;
+  font-size: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+p {
+  font-size: 200%;
+  line-height: 300%;
+}
+
+.btn:hover {
+  color: rgba(30, 30, 30, .6);
+  border: 5px rgba(30, 255, 30, .6) solid;
+}
+.top:hover {
+  color: rgba(30, 30, 30, .6);
+  border: 5px rgba(30, 255, 30, .6) solid;
+}
+
+.bottom a, p {
+  color: black
+}
+
+.bottom p {
+  text-indent: 50px;
+  text-align: left;
+  margin: 0px 5%;
+}
+.navContainer{
+  border-bottom: 5px silver solid;
+}
+.navBar a{
+
+  border: 1px solid black;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 2s;
+  font-size: 2.5em
+}
+.navBar a:hover{
+  transition: 1s;
+  background-color: rgba(150,150,150,.5);
+  color: rgba(30, 30, 30, .7);
+  border: 1px rgba(30, 255, 30, .6) solid;
+}
+.navBar{
+
+  display: grid;
+  grid-gap: 1em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-items: center;
+  grid-template-columns:  25% 25% 25% 25%;
+  grid-template-areas:
+  'main resume gitHub linkedin';
+}
+@media screen and (max-width: 768px) {
+  .intro{
+    background-position: 15% 60%;
+  }
+  .content h1 {
+    font-size: 300%;
+    text-shadow: 0px 0px 300px #000;
+  }
+  .btn{
+    font-size: 100%;
+  }
+  .bottom p {
+    text-indent: 0px;
+    font-size: 125%;
+    line-height: 200%;
+  }
+  .navContainer{
+    border-bottom: 10px black solid;
+
+  }
+  .navBar{
+    display: grid;
+    grid-gap: 1em;
+    justify-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'main resume'
+    'gitHub linkedin';
+  }
+  .navBar a{
+    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 2s;
+  }
+  .navBar a:hover{
+    transition: 1s;
+    background-color: rgba(150,150,150,.5);
+    color: rgba(30, 30, 30, .7);
+    border: 1px rgba(30, 255, 30, .6) solid;
+  }
+
+}
