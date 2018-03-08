@@ -19,7 +19,7 @@ li {
   border: 1px rgba(140, 0, 255, 0.7) solid;
   font-size: .9em;
   transition: 2s;
-  text-shadow: 1px 1px gray;
+  text-shadow: 1px 1px rgb(150,150,150);
   line-height: 200%;
 }
 
@@ -179,15 +179,23 @@ h3 {
 
 @media (max-width: 1280px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
     height: auto;
+  }
+  h3{
+    text-shadow: 1px 1px black;
+    font-size: 14px;
+  }
+  .box > p,li{
+    font-size: 12.5px;
+    text-shadow: 2px 2px black;
   }
   body {
     background-color: rgb(50, 50, 50);
   }
   .nestedHeader {
     grid-template-columns: 100%;
-    grid-gap: 1em;
+    grid-gap: 1.2em;
     font-size: 10px;
     grid-template-areas: 'first' 'last' 'picture';
   }
@@ -205,5 +213,6 @@ h3 {
     grid-gap: 1em;
     grid-template-areas: 'head' 'firstBreath' 'linkedin' 'github' 'main';
     text-decoration: none;
+    text-shadow: 1px 2px black;
   }
 }
