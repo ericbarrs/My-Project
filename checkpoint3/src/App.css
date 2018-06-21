@@ -1,0 +1,14 @@
+.Fetch {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+}
+
+html{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+ img{
+   padding: 20px;
+ }
