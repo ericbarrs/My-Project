@@ -1,5 +1,6 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
+import MediaQuery from 'react-responsive'
 import 'react-image-lightbox/style.css';
 
 const KEY = '8e2cabd0e3abb33aa46fab3f56643e36d3df0f024c60021c12cc8b7025de4b3b'
@@ -47,15 +48,15 @@ picture(){
       <div className="Fetch" onClick={(e)=>this.handleClickPic(e)}>
         {this.picture()}
       </div>
-
-        {isOpen && (
-    <Lightbox
-      mainSrc={this.state.pictures[photoIndex]}
-      nextSrc={this.state.pictures[(photoIndex + 1) % this.state.pictures.length]}
-      prevSrc={this.state.pictures[(photoIndex + this.state.pictures.length - 1) % this.state.pictures.length]}
-      onCloseRequest={() => this.setState({ isOpen: false })}
-      onMovePrevRequest={() =>
-        this.setState({
+        <MediaQuery query="(min-width: 768px)">
+          {isOpen && (
+          <Lightbox
+            mainSrc={this.state.pictures[photoIndex]}
+            nextSrc={this.state.pictures[(photoIndex + 1) % this.state.pictures.length]}
+            prevSrc={this.state.pictures[(photoIndex + this.state.pictures.length - 1) % this.state.pictures.length]}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
           photoIndex: (photoIndex + this.state.pictures.length - 1) % this.state.pictures.length,
         })
       }
@@ -65,7 +66,8 @@ picture(){
         })
       }
     />
-  )}
+      )}
+    </MediaQuery>
       </div>
 
       )
